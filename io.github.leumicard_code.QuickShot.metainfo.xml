@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.leumicard_code.QuickShot</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>QuickShot</name>
+  <summary>Fast GTK 4 Screenshot &amp; Annotation Tool for Linux</summary>
+  <developer id="io.github.leumicard_code">
+    <name>Shay Kadosh</name>
+  </developer>
+  <description>
+    <p>
+      QuickShot is a lightweight, native Rust and GTK 4 screenshot capture and instant annotation tool for Linux desktops.
+    </p>
+    <ul>
+      <li>Full-screen and interactive region capture via XDG Desktop Portal with optional 0s / 3s / 5s delay</li>
+      <li>Fast built-in Cairo annotation tools: Arrow, Rectangle, Privacy Blur/Pixelate, and Crop with Undo</li>
+      <li>One-click copy to clipboard (Ctrl+C) and PNG export (Ctrl+S) with full Hebrew keyboard shortcut support</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">io.github.leumicard_code.QuickShot.desktop</launchable>
+  <provides>
+    <binary>quickshot</binary>
+  </provides>
+  <releases>
+    <release version="0.1.0" date="2026-11-28">
+      <description>
+        <p>Initial Flatpak release of QuickShot with XDG Desktop Portal capture, Cairo annotation tools, crop, blur, and clipboard export.</p>
+      </description>
+    </release>
+  </releases>
+  <content_rating type="oars-1.1" />
+</component>

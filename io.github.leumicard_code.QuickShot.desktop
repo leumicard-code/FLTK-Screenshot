@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=QuickShot
+GenericName=Screenshot & Annotation Tool
+Comment=Fast GTK 4 Screenshot & Annotation Tool for Linux (Arrow, Rect, Pixelate & Crop)
+Exec=quickshot
+Icon=io.github.leumicard_code.QuickShot
+Terminal=false
+Categories=Graphics;Utility;Photography;GTK;
+Keywords=screenshot;capture;annotate;crop;blur;pixelate;screen;image;
+StartupNotify=true
+StartupWMClass=com.quickshot.App

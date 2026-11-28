@@ -1,0 +1,32 @@
+id: io.github.leumicard_code.QuickShot
+runtime: org.gnome.Platform
+runtime-version: '48'
+sdk: org.gnome.Sdk
+command: quickshot
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  - --filesystem=home
+modules:
+  - name: quickshot
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 target/release/quickshot /app/bin/quickshot
+      - install -Dm644 flatpak/io.github.leumicard_code.QuickShot.desktop /app/share/applications/io.github.leumicard_code.QuickShot.desktop
+      - install -Dm644 flatpak/io.github.leumicard_code.QuickShot.svg /app/share/icons/hicolor/scalable/apps/io.github.leumicard_code.QuickShot.svg
+      - install -Dm644 flatpak/io.github.leumicard_code.QuickShot.metainfo.xml /app/share/metainfo/io.github.leumicard_code.QuickShot.metainfo.xml
+    sources:
+      - type: dir
+        path: ..
+        skip:
+          - target/debug
+          - target/generate-rpm
+          - target/release/deps
+          - target/release/build
+          - target/release/incremental
+          - flatpak/build-dir
+          - flatpak/repo
+          - flatpak/.flatpak-builder
+          - flatpak/*.flatpak
